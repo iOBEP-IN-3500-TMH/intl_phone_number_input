@@ -8,7 +8,6 @@ class CountrySearchListWidget extends StatefulWidget {
   final List<Country> countries;
   final InputDecoration? searchBoxDecoration;
   final String? locale;
-  final ScrollController? scrollController;
   final bool autoFocus;
   final bool? showFlags;
   final bool? useEmoji;
@@ -22,7 +21,6 @@ class CountrySearchListWidget extends StatefulWidget {
       this.textBar,
       this.textBarStyle, {
         this.searchBoxDecoration,
-        this.scrollController,
         this.showFlags,
         this.onBack,
         this.useEmoji,
@@ -106,7 +104,6 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
         ),
         Flexible(
           child: ListView.builder(
-            controller: widget.scrollController,
             shrinkWrap: true,
             itemCount: filteredCountries.length,
             itemBuilder: (BuildContext context, int index) {
