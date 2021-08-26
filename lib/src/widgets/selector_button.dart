@@ -154,6 +154,8 @@ class SelectorButton extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       isScrollControlled: isScrollControlled,
       backgroundColor: Colors.transparent,
+      isDismissible: false,
+      enableDrag: false,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(12), topRight: Radius.circular(12))),
