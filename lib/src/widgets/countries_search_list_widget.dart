@@ -130,7 +130,6 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
     return Container(
       height: _expanded ? MediaQuery.of(context).size.height * 0.05 : 0,
       width: MediaQuery.of(context).size.width,
-      color: Colors.red,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
