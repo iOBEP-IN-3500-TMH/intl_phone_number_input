@@ -125,4 +125,12 @@ class PhoneNumber extends Equatable {
 
     return type;
   }
+
+  static Future<bool?> isValidNumber(
+      {required String phoneNumber, required String isoCode}) async {
+    if (phoneNumber.length < 2) {
+      return false;
+    }
+    return await PhoneNumberUtil.isValidNumber(phoneNumber: phoneNumber, isoCode: isoCode);
+  }
 }
